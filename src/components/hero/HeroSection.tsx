@@ -62,7 +62,7 @@ function FloatingCode() {
       {snippets.map((item, i) => (
         <motion.div
           key={i}
-          className="font-mono"
+          className="font-mono floating-code"
           initial={{ opacity: 0 }}
           animate={{
             opacity: [0, 0.12, 0.12, 0],
@@ -214,7 +214,7 @@ export default function HeroSection() {
       <FloatingCode />
 
       <div
-        className="section"
+        className="section hero-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -232,6 +232,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
+            className="hero-status-badge"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -316,6 +317,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4 }}
+            className="hero-cta-buttons"
             style={{
               display: "flex",
               flexWrap: "wrap",
@@ -339,6 +341,7 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.8 }}
+            className="hero-tech-stack"
             style={{
               marginTop: 48,
               display: "flex",
@@ -392,6 +395,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
+          className="hero-portrait"
           style={{
             position: "relative",
             height: "580px",
@@ -406,6 +410,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="portrait-ring-outer"
             style={{
               position: "absolute",
               width: "480px",
@@ -440,6 +445,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            className="portrait-ring-inner"
             style={{
               position: "absolute",
               width: "440px",
@@ -470,6 +476,7 @@ export default function HeroSection() {
 
           {/* Neon glow backdrop */}
           <div
+            className="portrait-glow-bg"
             style={{
               position: "absolute",
               width: "350px",
@@ -493,6 +500,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, -18, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="portrait-image-wrapper"
             style={{
               position: "relative",
               width: "380px",
@@ -559,6 +567,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, -10, 0], x: [0, 5, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+            className="portrait-tag-left"
             style={{
               position: "absolute",
               bottom: "15%",
@@ -586,6 +595,7 @@ export default function HeroSection() {
           <motion.div
             animate={{ y: [0, -12, 0], x: [0, -5, 0] }}
             transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="portrait-tag-right"
             style={{
               position: "absolute",
               top: "12%",
@@ -617,6 +627,7 @@ export default function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5 }}
+        className="scroll-indicator"
         style={{
           position: "absolute",
           bottom: 40,
@@ -664,13 +675,7 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          section > div:last-of-type > div:first-child {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 }

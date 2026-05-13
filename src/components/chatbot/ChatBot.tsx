@@ -85,6 +85,7 @@ export default function ChatBot() {
               ],
         }}
         transition={isOpen ? {} : { duration: 2, repeat: Infinity }}
+        className="chatbot-button"
         style={{
           position: "fixed",
           bottom: 28,
@@ -114,6 +115,7 @@ export default function ChatBot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ duration: 0.3 }}
+            className="chatbot-window"
             style={{
               position: "fixed",
               bottom: 96,

@@ -18,6 +18,7 @@ function FloatingUICards() {
       {cards.map((card, i) => (
         <motion.div
           key={i}
+          className="projects-floating-cards"
           animate={{
             y: [0, -10, 0],
             x: [0, i % 2 === 0 ? 5 : -5, 0],
@@ -170,6 +171,7 @@ function ProjectCard({
       />
 
       <div
+        className="projects-card-grid"
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 1fr",
@@ -275,7 +277,7 @@ function ProjectCard({
         </div>
 
         {/* Project Info */}
-        <div style={{ padding: "40px 44px" }}>
+        <div className="projects-card-info" style={{ padding: "40px 44px" }}>
           <h3
             className="font-orbitron"
             style={{
@@ -419,13 +421,7 @@ function ProjectCard({
         </div>
       </div>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          div[style*="grid-template-columns: 1fr 1fr"] {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
+
     </motion.div>
   );
 }

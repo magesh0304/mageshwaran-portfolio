@@ -49,6 +49,7 @@ export default function ExperienceSection() {
 
         {/* Timeline */}
         <div
+          className="experience-timeline"
           style={{
             position: "relative",
             maxWidth: 800,
@@ -60,6 +61,7 @@ export default function ExperienceSection() {
             initial={{ height: 0 }}
             animate={isInView ? { height: "100%" } : { height: 0 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
+            className="experience-timeline-line"
             style={{
               position: "absolute",
               left: 30,
@@ -77,6 +79,7 @@ export default function ExperienceSection() {
               initial={{ opacity: 0, x: 60 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.5 + i * 0.2, duration: 0.8 }}
+              className="experience-timeline-item"
               style={{
                 position: "relative",
                 paddingLeft: 80,
@@ -93,6 +96,7 @@ export default function ExperienceSection() {
                   ],
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
+                className="experience-timeline-dot"
                 style={{
                   position: "absolute",
                   left: 22,
@@ -108,7 +112,7 @@ export default function ExperienceSection() {
 
               {/* Experience Card */}
               <div
-                className="glass-card"
+                className="glass-card experience-card"
                 style={{ padding: "32px 36px" }}
               >
                 {/* Period Badge */}

@@ -531,6 +531,92 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* --- Tablet (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+    text-align: center;
+  }
+
+  .hero-grid > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-portrait {
+    height: 440px !important;
+  }
+
+  .hero-portrait .portrait-ring-outer {
+    width: 380px !important;
+    height: 380px !important;
+  }
+
+  .hero-portrait .portrait-ring-inner {
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  .hero-portrait .portrait-glow-bg {
+    width: 280px !important;
+    height: 280px !important;
+  }
+
+  .hero-portrait .portrait-image-wrapper {
+    width: 300px !important;
+    height: 380px !important;
+  }
+
+  .hero-portrait .portrait-tag-left {
+    left: 5% !important;
+  }
+
+  .hero-portrait .portrait-tag-right {
+    right: 0% !important;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .projects-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .projects-card-grid > div:first-child {
+    min-height: 280px !important;
+  }
+
+  .cert-featured-grid {
+    grid-template-columns: 1fr !important;
+    direction: ltr !important;
+  }
+
+  .cert-featured-grid > * {
+    direction: ltr !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .skills-bg-image {
+    display: none !important;
+  }
+}
+
+/* --- Tablet & Mobile (max-width: 768px) --- */
 @media (max-width: 768px) {
   .section {
     padding: 80px 0;
@@ -546,12 +632,264 @@ body {
   body {
     cursor: auto !important;
   }
+
+  .section-title {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 0.85rem;
+  }
+
+  /* Hero */
+  .hero-grid {
+    padding-top: 100px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .hero-portrait {
+    height: 380px !important;
+  }
+
+  .hero-portrait .portrait-ring-outer,
+  .hero-portrait .portrait-ring-inner {
+    display: none !important;
+  }
+
+  .hero-portrait .portrait-image-wrapper {
+    width: 260px !important;
+    height: 340px !important;
+  }
+
+  .hero-portrait .portrait-tag-left {
+    left: 0% !important;
+    bottom: 8% !important;
+    padding: 8px 12px !important;
+  }
+
+  .hero-portrait .portrait-tag-right {
+    right: -2% !important;
+    top: 8% !important;
+    padding: 8px 12px !important;
+  }
+
+  .hero-cta-buttons {
+    justify-content: center;
+  }
+
+  .hero-tech-stack {
+    justify-content: center;
+  }
+
+  .floating-code {
+    display: none !important;
+  }
+
+  .scroll-indicator {
+    bottom: 20px !important;
+  }
+
+  /* About */
+  .about-portrait-wrapper {
+    max-width: 320px !important;
+    margin: 0 auto;
+  }
+
+  .about-portrait-wrapper img {
+    height: 300px !important;
+  }
+
+  .about-rotating-particles {
+    display: none !important;
+  }
+
+  .about-story-card {
+    padding: 24px !important;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  /* Experience */
+  .experience-timeline {
+    max-width: 100% !important;
+  }
+
+  .experience-timeline-line {
+    left: 16px !important;
+  }
+
+  .experience-timeline-item {
+    padding-left: 50px !important;
+  }
+
+  .experience-timeline-dot {
+    left: 8px !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .experience-card {
+    padding: 24px 20px !important;
+  }
+
+  /* Projects */
+  .projects-card-grid > div:first-child {
+    min-height: 220px !important;
+  }
+
+  .projects-card-info {
+    padding: 28px 20px !important;
+  }
+
+  .projects-floating-cards {
+    display: none !important;
+  }
+
+  /* Certifications */
+  .cert-featured-card {
+    border-radius: 20px !important;
+  }
+
+  .cert-featured-image-col {
+    padding: 20px !important;
+  }
+
+  .cert-featured-info-col {
+    padding: 24px 20px !important;
+  }
+
+  .cert-other-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+
+  /* Contact */
+  .contact-portrait {
+    height: 180px !important;
+  }
+
+  .contact-form-card {
+    padding: 24px !important;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* ChatBot */
+  .chatbot-window {
+    width: calc(100vw - 32px) !important;
+    right: 16px !important;
+    bottom: 88px !important;
+    height: 420px !important;
+  }
+
+  .chatbot-button {
+    bottom: 20px !important;
+    right: 20px !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
 }
 
+/* --- Mobile (max-width: 480px) --- */
 @media (max-width: 480px) {
   .section {
     padding: 60px 0;
     padding-left: 12px;
     padding-right: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  /* Hero */
+  .hero-portrait {
+    height: 320px !important;
+  }
+
+  .hero-portrait .portrait-image-wrapper {
+    width: 220px !important;
+    height: 290px !important;
+    border-radius: 18px !important;
+  }
+
+  .hero-portrait .portrait-tag-left,
+  .hero-portrait .portrait-tag-right {
+    font-size: 0.6rem !important;
+  }
+
+  .hero-status-badge {
+    font-size: 0.7rem !important;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-cta-buttons .btn-primary,
+  .hero-cta-buttons .btn-secondary {
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* About */
+  .about-stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .about-highlight-card {
+    padding: 18px 20px !important;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important;
+  }
+
+  /* Certifications */
+  .cert-other-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .cert-featured-card {
+    margin-bottom: 32px !important;
+  }
+
+  /* Experience */
+  .experience-card h3 {
+    font-size: 1rem !important;
+  }
+
+  /* Contact */
+  .contact-link-card {
+    padding: 14px 16px !important;
+    gap: 12px !important;
+  }
+
+  /* Footer */
+  .footer-container {
+    padding: 40px 16px 30px !important;
   }
 }

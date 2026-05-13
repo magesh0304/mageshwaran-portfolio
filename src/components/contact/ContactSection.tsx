@@ -137,6 +137,7 @@ export default function ContactSection() {
         </motion.div>
 
         <div
+          className="contact-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -173,6 +174,7 @@ export default function ContactSection() {
               <img
                 src="/images/portrait-professional.jpg"
                 alt="Mageshwaran M"
+                className="contact-portrait"
                 style={{
                   width: "100%",
                   height: 220,
@@ -248,6 +250,7 @@ export default function ContactSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.1 }}
                 whileHover={{ x: 6 }}
+                className="contact-link-card"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -316,7 +319,7 @@ export default function ContactSection() {
             initial={{ opacity: 0, x: 40 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="glass-card"
+            className="glass-card contact-form-card"
             style={{ padding: 36 }}
           >
             <form
@@ -471,13 +474,7 @@ export default function ContactSection() {
         </div>
       </div>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          div[style*="grid-template-columns: 1fr 1fr"] {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 }

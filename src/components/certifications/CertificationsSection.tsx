@@ -73,6 +73,7 @@ function FeaturedCertCard({
         transition={{ duration: 1, delay: 0.2 + index * 0.3, ease: "easeOut" }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => { setIsHovered(false); setMousePos({ x: 0, y: 0 }); }}
+        className="cert-featured-card"
         style={{
           position: "relative", maxWidth: 950, margin: "0 auto 48px",
           borderRadius: 28, overflow: "hidden",
@@ -111,7 +112,7 @@ function FeaturedCertCard({
 
         <TechParticles />
 
-        <div style={{
+        <div className="cert-featured-grid" style={{
           display: "grid",
           gridTemplateColumns: isReversed ? "1fr 1fr" : "1fr 1fr",
           gap: 0, position: "relative", zIndex: 2,
@@ -121,6 +122,7 @@ function FeaturedCertCard({
           <motion.div
             animate={{ y: [0, -6, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="cert-featured-image-col"
             style={{
               padding: 36, display: "flex", alignItems: "center", justifyContent: "center",
               background: `radial-gradient(ellipse at center, ${cert.accent}08, transparent 70%)`,
@@ -149,7 +151,7 @@ function FeaturedCertCard({
           </motion.div>
 
           {/* Certificate Details */}
-          <div style={{
+          <div className="cert-featured-info-col" style={{
             padding: "44px 40px", display: "flex", flexDirection: "column",
             justifyContent: "center", direction: "ltr",
           }}>
@@ -231,14 +233,7 @@ function FeaturedCertCard({
           </div>
         </div>
 
-        <style jsx>{`
-          @media (max-width: 768px) {
-            div[style*="grid-template-columns"] {
-              grid-template-columns: 1fr !important;
-              direction: ltr !important;
-            }
-          }
-        `}</style>
+
       </motion.div>
 
       {/* Fullscreen Modal */}
@@ -374,7 +369,7 @@ export default function CertificationsSection() {
           Other Certifications
         </motion.h3>
 
-        <div style={{
+        <div className="cert-other-grid" style={{
           display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
           gap: 20, maxWidth: 1000, margin: "0 auto",
         }}>

@@ -106,6 +106,7 @@ export default function AboutSection() {
         </motion.div>
 
         <div
+          className="about-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
@@ -135,6 +136,7 @@ export default function AboutSection() {
             >
               {/* Rotating AI Particles */}
               <div
+                className="about-rotating-particles"
                 style={{
                   position: "absolute",
                   width: "100%",
@@ -148,6 +150,7 @@ export default function AboutSection() {
 
               {/* Glassmorphism Card with Portrait */}
               <div
+                className="about-portrait-wrapper"
                 style={{
                   position: "relative",
                   width: "100%",
@@ -270,7 +273,7 @@ export default function AboutSection() {
 
             {/* Story Card */}
             <div
-              className="glass-card"
+              className="glass-card about-story-card"
               style={{ padding: 36 }}
             >
               <div
@@ -342,7 +345,7 @@ export default function AboutSection() {
                 initial={{ opacity: 0, x: 40 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.3 + i * 0.1 }}
-                className="glass-card"
+                className="glass-card about-highlight-card"
                 style={{ padding: "24px 28px" }}
               >
                 <span
@@ -374,7 +377,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8 }}
-              className="glass-card"
+              className="glass-card about-stats-grid"
               style={{
                 padding: "28px",
                 display: "grid",
@@ -414,13 +417,7 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <style jsx>{`
-        @media (max-width: 768px) {
-          div[style*="grid-template-columns: 1fr 1fr"] {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
+
     </section>
   );
 }

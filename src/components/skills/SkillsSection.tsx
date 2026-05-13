@@ -215,6 +215,7 @@ export default function SkillsSection() {
         initial={{ opacity: 0, x: -80 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.3 }}
+        className="skills-bg-image"
         style={{
           position: "absolute",
           left: -80,
@@ -314,6 +315,7 @@ export default function SkillsSection() {
 
         {/* Skills Grid */}
         <div
+          className="skills-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",

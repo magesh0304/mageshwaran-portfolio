@@ -27,6 +27,7 @@ export default function Footer() {
       />
 
       <div
+        className="footer-container"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
@@ -34,6 +35,7 @@ export default function Footer() {
         }}
       >
         <div
+          className="footer-top"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -169,6 +171,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div
+          className="footer-bottom"
           style={{
             borderTop: "1px solid rgba(255, 255, 255, 0.04)",
             paddingTop: 24,
